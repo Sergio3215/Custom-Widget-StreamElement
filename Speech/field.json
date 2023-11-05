@@ -289,11 +289,6 @@
     "type": "checkbox",
     "value": true
   },
-  "botImageShow":{
-    "label": "Allow Bot Image",
-  	"type":"checkbox",
-    "value":false
-  },
   "globalTTSPrivileges": {
     "type": "dropdown",
     "group": "Permissions",
@@ -306,6 +301,12 @@
       "mods": "Mods",
       "broadcaster": "Broadcaster"
     }
+  },
+  "botImageShow":{
+    "label": "Allow Bot Image",
+    "group": "Image Settings",
+  	"type":"checkbox",
+    "value":false
   },
   "idToVoiceMap": {
     "type": "Permissions",
