@@ -1,3 +1,5 @@
-svg image{
-    border: 111px solid red;
-}
+.iframe-svg{
+    background-color:white;
+    border:1px solid transparent;
+    border-radius:100px;
+  }

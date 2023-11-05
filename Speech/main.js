@@ -4,12 +4,14 @@ let isPlaying = false;
 let queue = [];
 let currentAudio;
 let usersWithTTSOn = [];
+document.querySelector(".iframe-svg").style.display = "none";
 const endVoiceMessage = () => {
     if (queue.length > 0) {
         const nextMessage = queue.pop();
         sayMassageVoice(nextMessage.fullMessage, nextMessage.messageVoice);
     } else {
         isPlaying = false;
+        document.querySelector(".iframe-svg").style.display = "none";
     }
 };
 const sayMassageVoice = (fullMessage, messageVoice) => {
@@ -37,7 +39,7 @@ const sayMassageVoice = (fullMessage, messageVoice) => {
 };
 
 const generateMessage = (message, messageVoice, userDisplayName, obj) => {
-    const { doUserSaid, ignoreRepeats, sayLanguage, Command } = fieldData;
+    const { doUserSaid, ignoreRepeats, sayLanguage, Command, botImageShow } = fieldData;
     if (ignoreRepeats) {
         const hasRepeats = `${message}${message}`.indexOf(message, 1) !== message.length;
         if (hasRepeats) {
@@ -45,7 +47,7 @@ const generateMessage = (message, messageVoice, userDisplayName, obj) => {
         }
     }
 
-    if(message === ''){
+    if (message === '') {
         return;
     }
 
@@ -58,6 +60,10 @@ const generateMessage = (message, messageVoice, userDisplayName, obj) => {
     if (isPlaying) {
         queue.unshift({ fullMessage, messageVoice });
         return;
+    }
+
+    if (botImageShow) {
+        document.querySelector(".iframe-svg").style.display = "block";
     }
     sayMassageVoice(fullMessage, messageVoice);
 };

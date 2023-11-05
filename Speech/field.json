@@ -289,6 +289,11 @@
     "type": "checkbox",
     "value": true
   },
+  "botImageShow":{
+    "label": "Allow Bot Image",
+  	"type":"checkbox",
+    "value":false
+  },
   "globalTTSPrivileges": {
     "type": "dropdown",
     "group": "Permissions",
