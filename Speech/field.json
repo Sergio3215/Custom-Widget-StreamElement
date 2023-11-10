@@ -3,7 +3,7 @@
   	"type": "text",
     "label": "Say in your language",
     "group":"Setting Sound",
-    "value": ""
+    "value": "dice"
   },
   "volume": {
     "type": "slider",
@@ -307,6 +307,36 @@
     "group": "Image Settings",
   	"type":"checkbox",
     "value":false
+  },
+  "botImageIframe":{
+    "label": "Image with web Iframe",
+    "group": "Image Settings",
+  	"type":"checkbox",
+    "value":false
+  },
+  "botImageIMG":{
+    "label": "Image whit Image Directly",
+    "group": "Image Settings",
+  	"type":"checkbox",
+    "value":false
+  },
+  "URLImageIMG":{
+    "label": "URL Image",
+    "group": "Image Settings",
+  	"type":"text",
+    "value":"https://www.principianteenprogramar.com/files/svg/voiceEffect"
+  },
+  "widthImage":{
+    "label": "Width Image",
+    "group": "Image Settings",
+  	"type":"number",
+    "value":250
+  },
+  "heightImage":{
+    "label": "Height Image",
+    "group": "Image Settings",
+  	"type":"number",
+    "value":172
   },
   "idToVoiceMap": {
     "type": "Permissions",

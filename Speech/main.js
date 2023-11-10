@@ -3,7 +3,6 @@ let fieldData, apiToken;
 let isPlaying = false;
 let queue = [];
 let currentAudio;
-let usersWithTTSOn = [];
 document.querySelector(".iframe-svg").style.display = "none";
 const endVoiceMessage = () => {
     if (queue.length > 0) {
@@ -39,7 +38,7 @@ const sayMassageVoice = (fullMessage, messageVoice) => {
 };
 
 const generateMessage = (message, messageVoice, userDisplayName, obj) => {
-    const { doUserSaid, ignoreRepeats, sayLanguage, Command, botImageShow } = fieldData;
+    const { doUserSaid, ignoreRepeats, sayLanguage, Command, botImageShow, botImageIframe, botImageIMG } = fieldData;
     if (ignoreRepeats) {
         const hasRepeats = `${message}${message}`.indexOf(message, 1) !== message.length;
         if (hasRepeats) {
@@ -60,6 +59,26 @@ const generateMessage = (message, messageVoice, userDisplayName, obj) => {
     if (isPlaying) {
         queue.unshift({ fullMessage, messageVoice });
         return;
+    }
+
+    if(botImageIframe)
+    {
+        if(botImageIMG){
+            return
+        }
+        document.querySelector(".iframe-svg").innerHTML = `<iframe src="{{URLImageIMG}}" style="
+        width: {{widthImage}}px;
+        height: {{heightImage}}px;
+        border: 0px;
+    "></iframe>`
+    }
+    if(botImageIMG)
+    {
+        document.querySelector(".iframe-svg").innerHTML = `<img src="{{URLImageIMG}}" style="
+        width: {{widthImage}}px;
+        height: {{heightImage}}px;
+        border: 0px;
+    "></img>`
     }
 
     if (botImageShow) {
