@@ -312,7 +312,7 @@
     "label": "Image with web Iframe",
     "group": "Image Settings",
   	"type":"checkbox",
-    "value":false
+    "value":true
   },
   "botImageIMG":{
     "label": "Image whit Image Directly",
