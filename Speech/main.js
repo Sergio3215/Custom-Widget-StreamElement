@@ -4,10 +4,16 @@ let isPlaying = false;
 let queue = [];
 let currentAudio;
 document.querySelector(".iframe-svg").style.display = "none";
-const endVoiceMessage = () => {
+const endVoiceMessage = async () => {
     if (queue.length > 0) {
         const nextMessage = queue.pop();
-        sayMassageVoice(nextMessage.fullMessage, nextMessage.messageVoice);
+        let checkTiktok_ = fieldData.voiceTiktokCheck;
+        if (checkTiktok_) {
+            await sayText(nextMessage.fullMessage);
+        }
+        else {
+            sayMassageVoice(nextMessage.fullMessage, nextMessage.messageVoice);
+        }
     } else {
         isPlaying = false;
         document.querySelector(".iframe-svg").style.display = "none";
@@ -19,7 +25,7 @@ const sayMassageVoice = (fullMessage, messageVoice) => {
     }
     isPlaying = true;
     const volume = fieldData.volume;
-    const url = `//api.streamelements.com/kappa/v2/speech?voice=${messageVoice.replace('$', '')}&text=${encodeURI(fullMessage.replace(/&/g, ' and '))}&key=${apiToken}`
+    const url = `//api.streamelements.com/kappa/v2/speech?voice=${messageVoice.replace('$', '')}&text=${encodeURI(fullMessage.replace(/&/g, ' y '))}&key=${apiToken}`
     currentAudio = new Audio(url);
     currentAudio.volume = volume;
 
@@ -37,8 +43,61 @@ const sayMassageVoice = (fullMessage, messageVoice) => {
     }
 };
 
-const generateMessage = (message, messageVoice, userDisplayName, obj) => {
-    const { doUserSaid, ignoreRepeats, sayLanguage, Command, botImageShow, botImageIframe, botImageIMG } = fieldData;
+const sayText = async (text) => {
+    const { volume, voiceTiktok } = fieldData;
+    isPlaying = true;
+
+    // let fetchStr = await fetch('https://tiktok-tts.weilnet.workers.dev/api/generation', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //         text:text,
+    //         voice:voiceTiktok
+    //     }),
+    //     headers: {
+    //         "Content-type": "application/json"
+    //     }
+    // });
+    // let data = await fetchStr.json();
+    // if (!data) {
+    //     endVoiceMessage();
+    //     return;
+    // }
+    // const myAudio = new Audio();
+    // myAudio.src = `data:audio/mp3;base64,${data.data}`;
+    // myAudio.volume = volume;
+    // myAudio.addEventListener('ended', () => {
+    //     endVoiceMessage();
+    // });
+
+    // myAudio.play();
+    let voice = voiceTiktok;
+    fetch('https://tiktok-tts.weilnet.workers.dev/api/generation', {
+        method: 'POST',
+        body: JSON.stringify({
+            text,
+            voice
+        }),
+        headers: {
+            "Content-type": "application/json"
+        }
+    }).then(response => response.json())
+        .then(({ data }) => {
+            if (!data) {
+                endVoiceMessage();
+                return;
+            }
+            const myAudio = new Audio();
+            myAudio.src = `data:audio/mp3;base64,${data}`;
+            myAudio.volume = volume;
+            myAudio.addEventListener('ended', () => {
+                endVoiceMessage();
+            });
+            myAudio.play();
+        });
+};
+
+const generateMessage = async (message, messageVoice, userDisplayName, obj) => {
+    const { doUserSaid, ignoreRepeats, sayLanguage, Command, botImageShow, botImageIframe, botImageIMG, voiceTiktokCheck } = fieldData;
     if (ignoreRepeats) {
         const hasRepeats = `${message}${message}`.indexOf(message, 1) !== message.length;
         if (hasRepeats) {
@@ -61,9 +120,8 @@ const generateMessage = (message, messageVoice, userDisplayName, obj) => {
         return;
     }
 
-    if(botImageIframe)
-    {
-        if(botImageIMG){
+    if (botImageIframe) {
+        if (botImageIMG) {
             return
         }
         document.querySelector(".iframe-svg").innerHTML = `<iframe src="{{URLImageIMG}}" style="
@@ -72,8 +130,7 @@ const generateMessage = (message, messageVoice, userDisplayName, obj) => {
         border: 0px;
     "></iframe>`
     }
-    if(botImageIMG)
-    {
+    if (botImageIMG) {
         document.querySelector(".iframe-svg").innerHTML = `<img src="{{URLImageIMG}}" style="
         width: {{widthImage}}px;
         height: {{heightImage}}px;
@@ -84,7 +141,14 @@ const generateMessage = (message, messageVoice, userDisplayName, obj) => {
     if (botImageShow) {
         document.querySelector(".iframe-svg").style.display = "block";
     }
-    sayMassageVoice(fullMessage, messageVoice);
+
+    if (voiceTiktokCheck) {
+        fullMessage = `${userDisplayName.replaceAll("_", " ").replaceAll(".", " ")} ` + sayLanguage + ` ${message}`
+        await sayText(fullMessage)
+    }
+    else {
+        sayMassageVoice(fullMessage, messageVoice);
+    }
 };
 
 const checkPrivileges = (data, privileges) => {
@@ -104,7 +168,7 @@ const checkPrivileges = (data, privileges) => {
 };
 
 const raids = [];
-const defaultPerUserVoices = ['Nicole', 'Russell', 'Raveena', 'Amy', 'Brian', 'Emma', 'Joanna', 'Matthew', 'Salli'];
+const defaultPerUserVoices = ['Miguel', 'Enrique'];
 let isEnabledForEverybody = false;
 let isEnabled = true
 
@@ -171,6 +235,7 @@ const handleMessage = (obj) => {
         return;
     }
 
+    //ignore the bots messages
     let ArrBotLabel = (everybodyBotFilters != '') ? everybodyBotFilters.toLowerCase().split(',')
         :
         everybodyBotFilters.toLowerCase().split('');
