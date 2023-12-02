@@ -47,29 +47,6 @@ const sayText = async (text) => {
     const { volume, voiceTiktok } = fieldData;
     isPlaying = true;
 
-    // let fetchStr = await fetch('https://tiktok-tts.weilnet.workers.dev/api/generation', {
-    //     method: 'POST',
-    //     body: JSON.stringify({
-    //         text:text,
-    //         voice:voiceTiktok
-    //     }),
-    //     headers: {
-    //         "Content-type": "application/json"
-    //     }
-    // });
-    // let data = await fetchStr.json();
-    // if (!data) {
-    //     endVoiceMessage();
-    //     return;
-    // }
-    // const myAudio = new Audio();
-    // myAudio.src = `data:audio/mp3;base64,${data.data}`;
-    // myAudio.volume = volume;
-    // myAudio.addEventListener('ended', () => {
-    //     endVoiceMessage();
-    // });
-
-    // myAudio.play();
     let voice = voiceTiktok;
     fetch('https://tiktok-tts.weilnet.workers.dev/api/generation', {
         method: 'POST',
@@ -143,7 +120,7 @@ const generateMessage = async (message, messageVoice, userDisplayName, obj) => {
     }
 
     if (voiceTiktokCheck) {
-        fullMessage = `${userDisplayName.replaceAll("_", " ").replaceAll(".", " ")} ` + sayLanguage + ` ${message}`
+        fullMessage = (!doUserSaid) ? message : `${userDisplayName.replaceAll("_", " ").replaceAll(".", " ")} ` + sayLanguage + ` ${message}`
         await sayText(fullMessage)
     }
     else {
