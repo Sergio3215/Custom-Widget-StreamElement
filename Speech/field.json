@@ -349,7 +349,7 @@
     "value":true
   },
   "botImageIMG":{
-    "label": "Image whit Image Directly",
+    "label": "Image with Image Directly",
     "group": "Image Settings",
   	"type":"checkbox",
     "value":false

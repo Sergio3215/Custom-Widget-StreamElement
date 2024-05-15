@@ -1,0 +1,86 @@
+.efecto1{
+    animation: EffectOne 2s linear normal;
+    opacity: 0;
+}
+.efecto2{
+    animation: EffectTwo 2s linear normal;
+    opacity: 0;
+}
+.efecto3{
+    animation: EffectThree 2s linear normal;
+    opacity: 0;
+}
+.efecto4{
+    animation: EffectFour 2s linear normal;
+    opacity: 0;
+}
+
+@keyframes EffectOne {
+    0%{
+        opacity:1;
+        transform: translate(0px, 0px);
+    }
+    20%{
+        transform: translate(820px, 660px);
+    }
+    50%{
+        transform: translate(40px, 20px);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(900px, 20px);
+    }
+}
+
+
+@keyframes EffectTwo {
+    0%{
+        opacity:1;
+        transform: translate(0px, 0px);
+    }
+    20%{
+        transform: translate(220px, 720px);
+    }
+    50%{
+        transform: translate(140px, 250px);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(300px, 20px);
+    }
+}
+
+
+@keyframes EffectThree {
+    0%{
+        opacity:1;
+        transform: translate(20px, 60px);
+    }
+    20%{
+        transform: translate(120px, 520px);
+    }
+    50%{
+        transform: translate(440px, 650px);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(320px, 100px);
+    }
+}
+
+
+@keyframes EffectFour {
+    0%{
+        transform: translate(900px, 700px);
+    }
+    20%{
+        transform: translate(20px, 70px);
+    }
+    50%{
+        transform: translate(340px, 550px);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(100px, 20px);
+    }
+}
