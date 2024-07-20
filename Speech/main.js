@@ -178,7 +178,7 @@ const processText = (text, emotes) => {
 
 
 const handleMessage = (obj) => {
-    const { withCommand, Command, voice, everybodyBotFilters, ignoreLinks, globalTTSPrivileges, idToVoiceMap, ignoreBits } = fieldData;
+    const { withCommand, Command, CommandShort, voice, everybodyBotFilters, ignoreLinks, globalTTSPrivileges, idToVoiceMap, ignoreBits } = fieldData;
     const data = obj.detail.event.data;
     const { text, userId, displayName, emotes } = data;
 
@@ -243,6 +243,13 @@ const handleMessage = (obj) => {
         generateMessage(textToSay.toLowerCase().trim(), userVoice, displayName, obj);
         return;
     }
+    if (withCommand) {
+        if (!isCommanded) {
+            return;
+        }
+    }
+
+    isCommanded = text.includes(CommandShort);
     if (withCommand) {
         if (!isCommanded) {
             return;

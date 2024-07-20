@@ -275,6 +275,12 @@
     "label": "change your command",
     "value": ""
   },
+  "CommandShort":{
+  	"type": "text",
+    "group":"Setting Commands",
+    "label": "change your command short",
+    "value": ""
+  },
   "withCommand":{
   	"type": "checkbox",
     "group":"Setting Commands",
