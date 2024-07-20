@@ -236,8 +236,12 @@ const handleMessage = (obj) => {
 
 
     let isCommanded = text.includes(Command);
+    let isCommandedShort = text.includes(CommandShort);
     if (!withCommand) {
         if (isCommanded) {
+            return;
+        }
+        if (isCommandedShort) {
             return;
         }
         generateMessage(textToSay.toLowerCase().trim(), userVoice, displayName, obj);
@@ -245,18 +249,18 @@ const handleMessage = (obj) => {
     }
     if (withCommand) {
         if (!isCommanded) {
-            return;
+            if (!isCommandedShort) {
+                return;
+            }
         }
     }
 
-    isCommanded = text.includes(CommandShort);
-    if (withCommand) {
-        if (!isCommanded) {
-            return;
-        }
+    if (isCommanded) {
+        generateMessage(textToSay.toLowerCase().replace(Command.toLowerCase(), '').trim(), voice, displayName, obj);
     }
-
-    generateMessage(textToSay.toLowerCase().replace(Command.toLowerCase(), '').trim(), voice, displayName, obj);
+    else if (isCommandedShort) {
+        generateMessage(textToSay.toLowerCase().replace(CommandShort.toLowerCase(), '').trim(), voice, displayName, obj);
+    }
 };
 
 window.addEventListener('onEventReceived', function (obj) {
