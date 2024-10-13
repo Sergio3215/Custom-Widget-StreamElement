@@ -1,0 +1,56 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    margin: 1%;
+}
+
+.chat-container{
+    border: 1px solid #000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 5px 0px;
+    width: 280px;
+    transform: translate(0, 0);
+    /* animation: showAndHide 1s normal; */
+}
+
+@keyframes showAndHide {
+    from {
+        transform: translate(-1000px, 0px);
+    }
+    to {
+        transform: translate(0px, 0);
+    }
+}
+
+.chat-container div{
+    padding: 8px 20px;
+    padding-left: 15px;
+}
+
+#name-container{
+    background-color: #5916c3;
+    word-wrap: break-word;
+    font-weight: 900;
+}
+
+#name-container img{
+    height: 20px;
+    width: 20px;
+}
+
+#message-container{
+    background-color: #f6d18b;
+    color: #000;
+    word-wrap: break-word;
+    font-weight: 500;
+}
