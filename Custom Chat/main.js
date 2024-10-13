@@ -1,6 +1,6 @@
 
 const showMessage = async (objMessage) => {
-    console.log(objMessage);
+    // console.log(objMessage);
 
     if (document.querySelector(".main-container .chat-container") !== null) {
         let containersMain = document.querySelectorAll(".main-container .chat-container");
@@ -22,7 +22,7 @@ const showMessage = async (objMessage) => {
 
     let myText = text;
     let arrText = text.split(" ");
-    console.log(arrText);
+    // console.log(arrText);
 
     if(emotes.length > 0){
         emotes.forEach(emote => {
@@ -63,7 +63,7 @@ const showMessage = async (objMessage) => {
         Main.forEach(async (container) => {
             setTimeout(() => {
                 container.style.opacity = 0;
-            }, 5000);
+            }, 10000);
         });
     }
 

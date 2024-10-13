@@ -14,7 +14,7 @@
 }
 
 .chat-container{
-    border: 1px solid #000;
+    border: 2px solid #280037;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     margin: 5px 0px;
@@ -41,16 +41,19 @@
     background-color: #5916c3;
     word-wrap: break-word;
     font-weight: 900;
+    display: flex;
 }
 
 #name-container img{
     height: 20px;
     width: 20px;
+    margin-right: 5px;
 }
 
 #message-container{
     background-color: #f6d18b;
-    color: #000;
+    color: #000000;
     word-wrap: break-word;
     font-weight: 500;
+    font-size: 16px;
 }
