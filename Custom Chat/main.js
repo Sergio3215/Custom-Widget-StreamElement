@@ -28,7 +28,7 @@ const showMessage = async (objMessage) => {
         emotes.forEach(emote => {
             arrText.forEach((txt, index)=>{
                 if(txt == emote.name){
-                    arrText[index] = `<img src="${emote.urls[1]}"/>`;
+                    arrText[index] = `<img id="emote" src="${emote.urls[1]}"/>`;
                 }
                 else{
                     arrText[index] = `${txt}`;

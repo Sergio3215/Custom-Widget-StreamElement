@@ -1,7 +1,7 @@
 * {
     font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-size: 14px;
+    color: {{ColorTextHeader}};
+    font-size: {{FontSizeHeader}}px;
     overflow: hidden;
 }
 
@@ -14,13 +14,12 @@
 }
 
 .chat-container{
-    border: 2px solid #280037;
+    border: 2px solid {{ColorBorder}};
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     margin: 5px 0px;
-    width: 280px;
+    width: {{width}}px;
     transform: translate(0, 0);
-    /* animation: showAndHide 1s normal; */
 }
 
 @keyframes showAndHide {
@@ -38,22 +37,26 @@
 }
 
 #name-container{
-    background-color: #5916c3;
+    background-color: {{ColorHeader}};
     word-wrap: break-word;
-    font-weight: 900;
+    font-weight: {{FontWeightHeader}};
     display: flex;
 }
 
 #name-container img{
-    height: 20px;
-    width: 20px;
+    width: {{SizeImage}}px;
+    margin-right: 5px;
+}
+
+#emote{
+    width: {{SizeEmote}}px;
     margin-right: 5px;
 }
 
 #message-container{
-    background-color: #f6d18b;
-    color: #000000;
+    background-color: {{ColorBody}};
+    color: {{ColorTextBody}};
     word-wrap: break-word;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: {{FontWeightBody}};
+    font-size: {{FontSizeBody}}px;
 }

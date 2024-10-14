@@ -1,0 +1,102 @@
+{
+    "SizeEmote": {
+        "label": "Size Emote",
+        "group": "Size",
+        "type": "slider",
+        "value": 10,
+        "min": 0,
+        "max": 100,
+        "steps": 5
+    },
+    "SizeImage": {
+        "label": "Size Image",
+        "group": "Size",
+        "type": "slider",
+        "value": 20,
+        "min": 0,
+        "max": 100,
+        "steps": 5
+    },
+    "width": {
+        "label": "Width of box",
+        "group": "Size",
+        "type": "number",
+        "value": 280
+    },
+    "FontSizeHeader": {
+        "label": "Font Size Header",
+        "group": "Size",
+        "type": "number",
+        "value": 14
+    },
+    "FontSizeBody": {
+        "label": "Font Size Body",
+        "group": "Size",
+        "type": "number",
+        "value": 16
+    },
+    "FontWeightHeader": {
+        "label": "Font Weight Header",
+        "group": "Size",
+        "type": "slider",
+        "value": 900,
+        "min": 100,
+        "max": 1000,
+        "steps": 50
+    },
+    "FontWeightBody": {
+        "label": "Font Weight Body",
+        "group": "Size",
+        "type": "slider",
+        "value": 200,
+        "min": 100,
+        "max": 1000,
+        "steps": 50
+    },
+    "ColorHeader": {
+        "type": "colorpicker",
+        "group": "Color Box",
+        "label": "Color Box Header",
+        "value": "#5916c3"
+    },
+    "ColorBody": {
+        "type": "colorpicker",
+        "group": "Color Box",
+        "label": "Color Box Body",
+        "value": "#f6d18b"
+    },
+    "ColorTextHeader": {
+        "type": "colorpicker",
+        "group": "Color Box",
+        "label": "Color Text Header",
+        "value": "#FFFF"
+    },
+    "ColorTextBody": {
+        "type": "colorpicker",
+        "group": "Color Box",
+        "label": "Color Text Body",
+        "value": "#000"
+    },
+    "ColorBorder": {
+        "type": "colorpicker",
+        "group": "Color Box",
+        "label": "Color Border",
+        "value": "#280037"
+    },
+    "widgetName": {
+        "type": "hidden",
+        "value": "Banner by SerezDev"
+    },
+    "widgetAuthor": {
+        "type": "hidden",
+        "value": "SerezDev"
+    },
+    "widgetVersion": {
+        "type": "hidden",
+        "value": "1.0"
+    },
+    "widgetUpdateUrl": {
+        "type": "hidden",
+        "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Custom%20Chat"
+    }
+}

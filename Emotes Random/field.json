@@ -1,7 +1,18 @@
 {
-  "urlImage": {
-    "type": "text",
-    "label": "Url Image",
-    "value": ""
+  "widgetName": {
+      "type": "hidden",
+      "value": "Banner by SerezDev"
+  },
+  "widgetAuthor": {
+      "type": "hidden",
+      "value": "SerezDev"
+  },
+  "widgetVersion": {
+      "type": "hidden",
+      "value": "1.0"
+  },
+  "widgetUpdateUrl": {
+      "type": "hidden",
+      "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Emotes%20Random"
   }
 }
