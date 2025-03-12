@@ -1,0 +1,30 @@
+{
+  "Channel":{
+    "label": "Your Channel Name",
+    "group": "Setting",
+  	"type":"text",
+    "value":"Your-Channel"
+  },
+  "Message":{
+    "label": "Message (Variables: $name, $amount)",
+    "group": "Setting",
+  	"type":"text",
+    "value":"¡Gracias @$name por la raid de $amount Personas! Bienvenidos al canal! 🎉 Siganlo todos! https://www.twitch.tv/$name"
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "Automate Event Raid"
+  },
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "SerezDev"
+  },
+  "widgetVersion": {
+    "type": "hidden",
+    "value": "1.1.0"
+  },
+  "widgetUpdateUrl": {
+    "type": "hidden",
+    "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Event-Raid"
+  }
+}

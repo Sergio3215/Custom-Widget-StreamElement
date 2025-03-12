@@ -13,10 +13,21 @@ let fieldData;
  * @param {string} msg Message to show in the chat of stream
  */
 
-async function sendMessage(msg) {
+async function sendMessage(msg, data) {
   //This Function works, you need select the channel
   try {
-    const { Channel } = fieldData;
+    const { Channel, Message } = fieldData;
+    if(Message == ""){
+      Message = msg;
+    }
+    else{
+      const {
+        amount,
+        name
+      } = data;
+
+      Message.replaceAll("$amount", amount).replaceAll("$name", name);
+    }
     const ftch = await fetch('https://service-events-twitch-production.up.railway.app/send-message', {
       method: 'POST',
       headers: {
@@ -43,10 +54,10 @@ window.addEventListener('onEventReceived', async function (obj) {
     } = data;
 
     //Here Edit the message!
-    const msg = `¡Gracias @${name} por la raid de ${amount == 1? ` 1 persona`: `${amount} Personas`}! ${amount == 1? `Bienvenido`: `Bienvenidos`} al canal! 🎉 Siganlo todos! https://www.twitch.tv/${name}`;
+    const msg = `¡Gracias @${name} por la raid de ${amount} Personas! Bienvenidos al canal! 🎉 Siganlo todos! https://www.twitch.tv/${name}`;
 
     //Here Send the message
-    sendMessage(msg);
+    sendMessage(msg, data);
   }
 });
 
