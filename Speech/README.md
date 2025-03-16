@@ -3,7 +3,7 @@
 ## Description
 ##### The bot for read with his voice the chat of streamer
 
-## Get Started 🚀 
+## Get Started 🚀
 
 - ##### Create an overlay with Stream Elements
 - ##### Add Widget Custom
