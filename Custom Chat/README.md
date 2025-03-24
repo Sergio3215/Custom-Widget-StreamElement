@@ -1,7 +1,7 @@
-# Bot Voice Speech
+# Custom Chat
 
 ## Description
-##### The bot for read with his voice the chat of streamer
+##### The custom chat is for the style of chat on obs
 
 ## Get Started 🚀
 
