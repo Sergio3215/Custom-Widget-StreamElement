@@ -175,7 +175,7 @@
     "label": "URL Image",
     "group": "Image Settings",
     "type": "text",
-    "value": "https://www.principianteenprogramar.com/files/svg/voiceEffect"
+    "value": "https://media.tenor.com/plpPnoAnRy4AAAAi/elmo-fire-phoenix.gif"
   },
   "widthImage": {
     "label": "Width Image",
@@ -203,11 +203,11 @@
   },
   "widgetName": {
     "type": "hidden",
-    "value": "TTS by Principiante En Programar"
+    "value": "TTS by Serez Dev"
   },
   "widgetAuthor": {
     "type": "hidden",
-    "value": "Principiante En Programar"
+    "value": "Serez Dev"
   },
   "widgetVersion": {
     "type": "hidden",
