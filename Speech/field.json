@@ -17,7 +17,7 @@
   "voice": {
     "type": "dropdown",
     "label": "TTS Voice",
-    "value": "Miguel",
+    "value": "gbTn1bmCvNgk0QEAVyfM",
     "group": "Setting Sound",
     "options": {
       "t0jbNlBVZ17f02VDIeMI": "Jessie (man)",
@@ -25,11 +25,19 @@
       "2EiwWnXFnvU5JabPnv8n": "Clyde",
       "iP95p4xoKVk53GoZ742B": "Chris",
       "g5CIjZEefAph4nQFvHAz": "Ethan",
+      "gbTn1bmCvNgk0QEAVyfM":"Enrique M. Nieto (Español)",
+      "6xftrpatV0jGmFHxDjUv":"Martin Osborne (Español)",
+      "Nh2zY9kknu6z4pZy6FhD":"David Martin (Español)",
       "jsCqWAovK2LkecY7zXl4": "Freya",
       "AZnzlk1XvdvUeBnXmlld": "Domi",
       "MF3mGyEYCl7XYWbV9V6O": "Elli",
       "LcfcDJNUP1GQjkzn1xUU": "Emily",
-      "piTKgcLEGmPE4e6mEKli": "Nicole"
+      "piTKgcLEGmPE4e6mEKli": "Nicole",
+      "SLiC4fN7sbVbYUgtVxNM":"Emily 2.0 (Español)",
+      "MD6rLAhozcrmkdMZeOBt":"July - Youthful (Español)",
+      "FIhWHKTvfI9sX1beLEJ8":"Diana Sanchez (Español)",
+      "9rvdnhrYoXoUt4igKpBw":"Mariana -Intimate and Assertive (Español)",
+      "KoIf2KgeJA8uoGcgKIao":"Marcela - Positive (Español)"
     }
   },
   "voiceTiktokCheck": {
