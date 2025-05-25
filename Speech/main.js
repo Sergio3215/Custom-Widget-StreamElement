@@ -19,13 +19,28 @@ const endVoiceMessage = async () => {
         document.querySelector(".iframe-svg").style.display = "none";
     }
 };
-const sayMassageVoice = (fullMessage, messageVoice) => {
+const sayMassageVoice = async (fullMessage, messageVoice) => {
     if (!fullMessage.trim()) {
         return;
     }
     isPlaying = true;
     const volume = fieldData.volume;
-    const url = `//api.streamelements.com/kappa/v2/speech?voice=${messageVoice.replace('$', '')}&text=${encodeURI(fullMessage.replace(/&/g, ' y '))}&key=${apiToken}`
+    console.log(messageVoice, fullMessage);
+    // const url = `//api.streamelements.com/kappa/v2/speech?voice=${messageVoice.replace('$', '')}&text=${encodeURI(fullMessage.replace(/&/g, ' y '))}&key=${apiToken}`
+
+    const fetchUrl = await fetch('https://tts-api-prod.up.railway.app/api/tts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            text: fullMessage,
+            voice: messageVoice
+        })
+    });
+
+    const data = await fetchUrl.json();
+    const url = `data:audio/mpeg;base64,${data.audio}`;
     currentAudio = new Audio(url);
     currentAudio.volume = volume;
 
