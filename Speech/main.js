@@ -27,44 +27,49 @@ const sayMassageVoice = async (fullMessage, messageVoice) => {
     const volume = fieldData.volume;
     console.log(messageVoice, fullMessage);
     // const url = `//api.streamelements.com/kappa/v2/speech?voice=${messageVoice.replace('$', '')}&text=${encodeURI(fullMessage.replace(/&/g, ' y '))}&key=${apiToken}`
-
-
     const { Channel } = fieldData;
 
-    try {
-        const fetchUrl = await fetch('https://tts-api-prod.up.railway.app/api/tts', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                text: fullMessage,
-                voice: messageVoice,
-                channel: Channel,
-            })
-        });
 
-        const data = await fetchUrl.json();
-        const url = `data:audio/mpeg;base64,${data.audio}`;
-        currentAudio = new Audio(url);
-        currentAudio.volume = volume;
+    setTimeout(async () => {
 
-        currentAudio.addEventListener('ended', endVoiceMessage);
         try {
-            const playPromise = currentAudio.play();
-            if (!playPromise) {
-                return;
+            const fetchUrl = await fetch('https://tts-api-prod.up.railway.app/api/tts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    text: fullMessage,
+                    voice: messageVoice,
+                    channel: Channel,
+                })
+            });
+
+            const data = await fetchUrl.json();
+            const url = `data:audio/mpeg;base64,${data.audio}`;
+            currentAudio = new Audio(url);
+            currentAudio.volume = volume;
+
+            currentAudio.addEventListener('ended', endVoiceMessage);
+            try {
+                const playPromise = currentAudio.play();
+                if (!playPromise) {
+                    return;
+                }
+                playPromise.then(() => {
+                    console.log('playing message');
+                }).catch(e => console.log(e));
+            } catch (e) {
+                console.log(e);
             }
-            playPromise.then(() => {
-                console.log('playing message');
-            }).catch(e => console.log(e));
-        } catch (e) {
-            console.log(e);
+        } catch (error) {
+            console.error('Error fetching TTS:', error);
+            isPlaying = false;
         }
-    } catch (error) {
-        console.error('Error fetching TTS:', error);
-        isPlaying = false;
-    }
+    }, 500);
+
+
+
 };
 
 const sayText = async (text) => {
