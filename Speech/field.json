@@ -29,6 +29,7 @@
       "kQ2PqMG3mrPg5axZCpbK": "Chico X Argentino (Español)",
       "LGAG9SB8uLv5PsjBMv2e": "Sergio Juvenal (Español)",
       "XycthGC05N1kfJIb8PMg": "Damian Valdez (Español)",
+      "jlIgiDSr6st6wgbFwg6M": "Hombre sensual y Sexy (Español)",
       "jsCqWAovK2LkecY7zXl4": "Freya",
       "AZnzlk1XvdvUeBnXmlld": "Domi",
       "MF3mGyEYCl7XYWbV9V6O": "Elli",
@@ -80,11 +81,11 @@
       "kr_003": "KR Female"
     }
   },
-  "Channel":{
+  "Channel": {
     "label": "Your Channel Name",
     "group": "Setting Sound",
-  	"type":"text",
-    "value":"Your-Channel"
+    "type": "text",
+    "value": "Your-Channel"
   },
   "Command": {
     "type": "text",
