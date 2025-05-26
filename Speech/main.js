@@ -28,6 +28,9 @@ const sayMassageVoice = async (fullMessage, messageVoice) => {
     console.log(messageVoice, fullMessage);
     // const url = `//api.streamelements.com/kappa/v2/speech?voice=${messageVoice.replace('$', '')}&text=${encodeURI(fullMessage.replace(/&/g, ' y '))}&key=${apiToken}`
 
+    
+    const { Channel } = fieldData;
+
     const fetchUrl = await fetch('https://tts-api-prod.up.railway.app/api/tts', {
         method: 'POST',
         headers: {
@@ -35,7 +38,8 @@ const sayMassageVoice = async (fullMessage, messageVoice) => {
         },
         body: JSON.stringify({
             text: fullMessage,
-            voice: messageVoice
+            voice: messageVoice,
+            channel: Channel,
         })
     });
 

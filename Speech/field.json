@@ -80,6 +80,12 @@
       "kr_003": "KR Female"
     }
   },
+  "Channel":{
+    "label": "Your Channel Name",
+    "group": "Setting Sound",
+  	"type":"text",
+    "value":"Your-Channel"
+  },
   "Command": {
     "type": "text",
     "group": "Setting Commands",
