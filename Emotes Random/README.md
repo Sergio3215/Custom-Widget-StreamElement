@@ -5,7 +5,7 @@
 ### Description📝
 This bot detects emotes in chat and generates visual effects when they are used.
 
-### Documentation 📃
+### Get Start 🚀
 To get started, follow these steps:
 
 - Create an overlay in Stream Elements
@@ -21,7 +21,7 @@ To get started, follow these steps:
 ### Descripción📝
 Este bot lee emotes y crea efectos visuales cuando son usados en el chat.
 
-### Documentación📃
+### Comenzar 🚀
 Los primeros pasos son:
 
 - Crear un overlay en Stream Elements

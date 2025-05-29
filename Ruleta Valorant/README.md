@@ -9,8 +9,7 @@ Este comando se personaliza con el campo Command y se envía a través del campo
 
 Cuando usas el comando, selecciona un agente de Valorant aleatoriamente.
 
-### Documentación📃
-
+### Comenzar 🚀
 Los primeros pasos son:
 
 - Crear un overlay en Stream Elements
@@ -32,7 +31,7 @@ This command is customized with the Command field and sent through the Channel f
 
 When you use the command, it selects one Valorant agent randomly.
 
-### Documentation 📃
+### Get Start 🚀
 To get started, follow these steps:
 
 - Create an overlay in Stream Elements

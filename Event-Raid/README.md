@@ -10,8 +10,7 @@
 - Las variables disponibles para el mensaje son $amount y $name. 
 #### $amount representa el número de raiders, y $name es el nombre del raider.
 
-### Documentación 📃
-
+### Comenzar 🚀
 Los primeros pasos son:
 
 - Crear un overlay en Stream Elements
@@ -35,7 +34,7 @@ _Nota: El canal SerezDevBot debe tener permisos de moderador_
 #### $amount represents the number of raiders, and $name is the name of the raider.
 
 
-### Documentation 📃
+### Get Start 🚀
 To get started, follow these steps:
 
 - Create an overlay in Stream Elements

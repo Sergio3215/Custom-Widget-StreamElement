@@ -5,7 +5,7 @@
 ### Descripción📝
 ##### Este bot lee los mensajes del chat en voz alta usando funcionalidad texto a voz.
 
-### Documentación 📃
+### Comenzar 🚀
 Para comenzar, sigue estos pasos:
 
 - Crear un overlay en Stream Elements
@@ -22,7 +22,7 @@ Para comenzar, sigue estos pasos:
 ##### This bot reads chat messages aloud using text-to-speech functionality.
 
 
-### Documentation 📃
+### Get Start 🚀
 To get started, follow these steps:
 
 - Create an overlay in Stream Elements

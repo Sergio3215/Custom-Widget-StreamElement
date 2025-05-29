@@ -5,7 +5,7 @@
 ### Descripción📝
 ##### Este widget te permite personalizar la apariencia del chat en OBS.
 
-### Documentación📃
+### Comenzar 🚀
 Para comenzar, sigue estos pasos:
 
 - Crear un overlay en Stream Elements
@@ -21,7 +21,7 @@ Para comenzar, sigue estos pasos:
 ### Description 📝
 ##### This widget allows you to customize the appearance of your OBS chat display.
 
-### Documentation 📃
+### Get Start 🚀
 To get started, follow these steps:
 
 - Create an overlay in Stream Elements
