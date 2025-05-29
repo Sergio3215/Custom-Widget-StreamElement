@@ -19,7 +19,7 @@ Los primeros pasos son:
     - HTML para index.html
     - CSS para style.css
     - JS para main.js
-    - Campos para fields.json
+    - Fields para fields.json
 
 _Nota: El canal SerezDevBot debe tener permisos de moderador_
 

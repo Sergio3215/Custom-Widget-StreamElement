@@ -14,7 +14,7 @@ Para comenzar, sigue estos pasos:
     - HTML en index.html
     - CSS en style.css
     - JS en main.js
-    - Campos en fields.json
+    - Fields en fields.json
 
 ## English
 

@@ -14,7 +14,7 @@ Los primeros pasos son:
     - HTML para index.html
     - CSS para style.css
     - JS para main.js
-    - Campos para fields.json
+    - Fields para fields.json
 
 ## English
 
