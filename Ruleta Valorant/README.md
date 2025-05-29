@@ -2,14 +2,14 @@
 
 ## Español
 
-### Descripción
+### Descripción📝
 Este widget implementa una ruleta de agentes de Valorant para Stream Elements.
 
 Este comando se personaliza con el campo Command y se envía a través del campo Channel.
 
 Cuando usas el comando, selecciona un agente de Valorant aleatoriamente.
 
-### Documentación
+### Documentación📃
 
 Los primeros pasos son:
 
@@ -25,24 +25,23 @@ _Nota: El canal SerezDevBot debe tener permisos de moderador_
 
 ## English
 
-### Description
+### Description📝
 This widget implements a Valorant agent roulette for Stream Elements.
 
 This command is customized with the Command field and sent through the Channel field.
 
 When you use the command, it selects one Valorant agent randomly.
 
-### Documentation 
+### Documentation 📃
+To get started, follow these steps:
 
-The first steps are:
-
-- Create an overlay on Stream Elements
+- Create an overlay in Stream Elements
 - Create a custom static widget
-- Add the following code:
-    - HTML for index.html
-    - CSS for style.css
-    - JS for main.js
-    - Fields for fields.json
+- Add the following code files:
+    - HTML in index.html
+    - CSS in style.css
+    - JS in main.js
+    - Fields in fields.json
 
     
 _Note: The SerezDevBot channel must have moderator permissions_

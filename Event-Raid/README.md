@@ -1,12 +1,50 @@
 # Event Raid for Twitch✈️
 
-## Description📝
-#### The Event Raid for Twitch is thinked for automate the message of raids, and the streamer don't have dependencies with other moderators.
+## Español
 
-## Using the code ⌨️
-- #### Only you need complete the field of channel, and message to show.
-- #### The variable for message is $amount and $name. 
-#### $amount is used for number of rided, and $name is name of raider.
+### Descripción📝
+#### El Event Raid para Twitch está diseñado para automatizar los mensajes de raid, así el streamer no necesita depender de otros moderadores.
 
-## Important🤓
-### **The Channel SerezDevBot, must to have the role moderator**.
+### Usando el código ⌨️
+- Solo necesitas completar el campo del canal y el mensaje a mostrar.
+- Las variables disponibles para el mensaje son $amount y $name. 
+#### $amount representa el número de raiders, y $name es el nombre del raider.
+
+### Documentación 📃
+
+Los primeros pasos son:
+
+- Crear un overlay en Stream Elements
+- Crear un widget estático personalizado
+- Agregar el siguiente código:
+    - HTML para index.html
+    - CSS para style.css
+    - JS para main.js
+    - Campos para fields.json
+
+_Nota: El canal SerezDevBot debe tener permisos de moderador_
+
+## English
+
+### Description📝
+#### The Event Raid for Twitch is designed to automate raid messages, so the streamer doesn't need to depend on other moderators.
+
+### Using the code ⌨️
+- You only need to complete the channel field and the message to display.
+- The available message variables are $amount and $name. 
+#### $amount represents the number of raiders, and $name is the name of the raider.
+
+
+### Documentation 📃
+To get started, follow these steps:
+
+- Create an overlay in Stream Elements
+- Create a custom static widget
+- Add the following code files:
+    - HTML in index.html
+    - CSS in style.css
+    - JS in main.js
+    - Fields in fields.json
+
+    
+_Note: The SerezDevBot channel must have moderator permissions_
