@@ -5,6 +5,12 @@
   	"type":"text",
     "value":"Your-Channel"
   },
+  "Command":{
+    "label": "Your Command",
+    "group": "Setting",
+  	"type":"text",
+    "value":"!ruleta"
+  },
   "widgetName": {
     "type": "hidden",
     "value": "Automate Event Raid"

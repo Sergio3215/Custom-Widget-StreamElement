@@ -1,6 +1,6 @@
 let fieldData;
 
-const ruletaValorant = async () => {
+const ruletaValorant = async (Channel) => {
     const valkorantCharacters = [
         "Jett",
         "Phoenix",
@@ -34,22 +34,19 @@ const ruletaValorant = async () => {
     const randomIndex = Math.floor(Math.random() * valkorantCharacters.length);
     const randomCharacter = valkorantCharacters[randomIndex];
 
-    
-    const { Channel } = fieldData;
-
-    if(Channel == "" || Channel == "Your-Channel") {
+    if (Channel == "" || Channel == "Your-Channel") {
         return;
     }
-    
+
     const ftch = await fetch('https://service-events-twitch-production.up.railway.app/send-message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        channel: Channel,
-        message: randomCharacter
-      })
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            channel: Channel,
+            message: randomCharacter
+        })
     });
 }
 
@@ -62,14 +59,18 @@ window.addEventListener('onEventReceived', function (obj) {
     const event = detail.event;
     const data = event.data;
 
-    console.log(data);
+    const { Channel, Command } = fieldData;
+
+    let command_ = Command.toLowerCase();
+
+    if (command_ == '') {
+        command_ = '!ruleta';
+    }
 
     if (listener === 'message') {
-        if (!(data.text.includes('!ruleta'))) {
-            return;
+        if (data.text == command_) {
+            ruletaValorant(Channel);
         }
-
-        ruletaValorant();
     }
 });
 
