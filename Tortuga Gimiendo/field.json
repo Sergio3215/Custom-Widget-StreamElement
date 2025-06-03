@@ -1,0 +1,18 @@
+{
+  "widgetName": {
+    "type": "hidden",
+    "value": "Automate Event Raid"
+  },
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "SerezDev"
+  },
+  "widgetVersion": {
+    "type": "hidden",
+    "value": "1.1.0"
+  },
+  "widgetUpdateUrl": {
+    "type": "hidden",
+    "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Event-Raid"
+  }
+}
