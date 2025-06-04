@@ -1,4 +1,16 @@
 {
+  "Command": {
+    "label": "Your Command",
+    "group": "Setting",
+    "type": "text",
+    "value": "!video"
+  },
+  "URLVideo": {
+    "label": "URL Video",
+    "group": "Setting",
+    "type": "text",
+    "value": "https://cdn.streamelements.com/uploads/01jwszydmk7awvrswf6pkt7n9t.mp4"
+  },
   "widgetName": {
     "type": "hidden",
     "value": "Automate Event Raid"

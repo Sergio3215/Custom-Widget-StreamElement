@@ -4,8 +4,10 @@ let fieldData;
 const tortugaGimiendo = () => {
     const video = document.querySelector("video");
     video.style.display = "flex";
+    video.currentTime = 0;
+    video.muted = false;
     video.volume = 1;
-    video.play();
+    video.play().catch(console.error);
 
     setTimeout(() => {
         video.volume = 0;
@@ -25,8 +27,16 @@ window.addEventListener('onEventReceived', function (obj) {
     const video = document.querySelector("video");
     video.style.display = "none";
 
+    const { Command } = fieldData;
+
+    let command_ = Command.toLowerCase();
+
+    if (command_ == '') {
+        command_ = '!video';
+    }
+
     if (listener === 'message') {
-        if(data.text == "!sexo"){
+        if(data.text == command_){
             tortugaGimiendo();
         }
     }

@@ -1,13 +1,9 @@
-# Ruleta Valorant Widget | Widget Ruleta Valorant
+# Video Comando | Video Command
 
 ## Español
 
 ### Descripción📝
-Este widget implementa una ruleta de agentes de Valorant para Stream Elements.
-
-Este comando se personaliza con el campo Command y se envía a través del campo Channel.
-
-Cuando usas el comando, selecciona un agente de Valorant aleatoriamente.
+Con un comando de Stream Element podes reproducir un video.
 
 ### Comenzar 🚀
 Los primeros pasos son:
@@ -25,11 +21,7 @@ _Nota: El canal SerezDevBot debe tener permisos de moderador_
 ## English
 
 ### Description📝
-This widget implements a Valorant agent roulette for Stream Elements.
-
-This command is customized with the Command field and sent through the Channel field.
-
-When you use the command, it selects one Valorant agent randomly.
+When the user use a command, the video is played.
 
 ### Get Start 🚀
 To get started, follow these steps:
