@@ -1,0 +1,65 @@
+{
+  "Channel": {
+    "label": "Your Channel Name",
+    "group": "Setting",
+    "type": "text",
+    "value": "Your-Channel"
+  },
+  "Command": {
+    "label": "Your Command",
+    "group": "Setting",
+    "type": "text",
+    "value": "!ruletaMP"
+  },
+  "ColorBackground": {
+    "type": "colorpicker",
+    "group": "Style",
+    "label": "Color Background",
+    "value": "#000"
+  },
+  "ColorFont": {
+    "type": "colorpicker",
+    "group": "Style",
+    "label": "Color Font",
+    "value": "#d3891a"
+  },
+  "FontFamily": {
+    "type": "dropdown",
+    "label": "Font Family",
+    "value": "Ubuntu Sans",
+    "group": "Style",
+    "options": {
+      "Edu QLD Hand": "Edu QLD Hand",
+      "Ubuntu Sans": "Ubuntu Sans",
+      "Arial": "Arial",
+      "Courier New": "Courier New",
+      "Georgia": "Georgia",
+      "Impact": "Impact",
+      "Lucida Console": "Lucida Console",
+      "Time New Roman": "Time New Roman",
+      "Verdana": "Verdana"
+    }
+  },
+  "FontWeight": {
+    "type": "colorpicker",
+    "group": "Style",
+    "label": "Color Stroke",
+    "value": "#000"
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "Automate Event Raid"
+  },
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "SerezDev"
+  },
+  "widgetVersion": {
+    "type": "hidden",
+    "value": "1.1.0"
+  },
+  "widgetUpdateUrl": {
+    "type": "hidden",
+    "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Event-Raid"
+  }
+}
