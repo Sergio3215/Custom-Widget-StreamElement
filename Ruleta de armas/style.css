@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+.character-name{
+    font-size: 86px;
+    margin-top: 0px;
+    color: {{ColorFont}};
+    text-shadow: 2px 2px 10px {{FontWeight}};
+    background-color: {{ColorBackground}};
+    border: 1px solid {{ColorBackground}};
+    text-align: center;
+    font-family:{{FontFamily}};
+    font-weight: 700;
+}
+
+.character-image{
+    margin-left: 58px;
+}
