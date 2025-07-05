@@ -1,13 +1,13 @@
-# Ruleta Valorant Widget | Widget Ruleta Valorant
+# Ruleta Valorant Widget | Widget Ruleta Arma Valorant
 
 ## Español
 
 ### Descripción📝
-Este widget implementa una ruleta de agentes de Valorant para Stream Elements.
+Este widget implementa una ruleta de armas de Valorant para Stream Elements.
 
 Este comando se personaliza con el campo Command y se envía a través del campo Channel.
 
-Cuando usas el comando, selecciona un agente de Valorant aleatoriamente.
+Cuando usas el comando, selecciona un arma de Valorant aleatoriamente.
 
 ### Comenzar 🚀
 Los primeros pasos son:
@@ -25,11 +25,11 @@ _Nota: El canal SerezDevBot debe tener permisos de moderador_
 ## English
 
 ### Description📝
-This widget implements a Valorant agent roulette for Stream Elements.
+This widget implements a Valorant weapons roulette for Stream Elements.
 
 This command is customized with the Command field and sent through the Channel field.
 
-When you use the command, it selects one Valorant agent randomly.
+When you use the command, it selects one Valorant weapons randomly.
 
 ### Get Start 🚀
 To get started, follow these steps:
