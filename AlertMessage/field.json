@@ -1,0 +1,73 @@
+{
+    "sounds": {
+        "type": "dropdown",
+        "label": "Opciones de sonido",
+        "value": "1",
+        "group": "Setting Sound",
+        "options": {
+            "1": "Clarity",
+            "2": "Discord",
+            "3": "Error",
+            "4": "MSN",
+            "5": "Beep",
+            "6": "Clarity2",
+            "7": "Telegram",
+            "8": "GTA V",
+            "9": "BAM",
+            "10": "Whatsapp",
+            "11": "Game",
+            "12": "Telegram2",
+            "13": "Monster Hunter",
+            "14": "Teams",
+            "15": "Tiii",
+            "16": "Multiples alertas",
+            "17": "Tilin",
+            "18": "Purum",
+            "19": "Steam",
+            "20": "Purum2",
+            "21": "Tituti",
+            "22": "Purum3",
+            "23": "Kika",
+            "24": "Sucutrule",
+            "25": "Silbido",
+            "26": "Geometry Dash",
+            "27": "Iphone",
+            "28": "Tutu ru tutu",
+            "29": "Turu",
+            "30": "Timbre",
+            "31": "Iphone Falso"
+        }
+    },
+    "volume": {
+        "type": "slider",
+        "label": "Volume",
+        "group": "Setting Sound",
+        "value": 1,
+        "min": 0,
+        "max": 1,
+        "steps": 0.1
+    },
+    "bots":{
+        "type": "text",
+        "label": "Bots",
+        "value": "StreamElements, Streamlabs, Nightbot, Moobot, Wizebot, SerezDevBot",
+        "group": "Filter Bots",
+        "placeholder": "StreamElements, Streamlabs, Nightbot"
+    },
+    "widgetName": {
+        "type": "hidden",
+        "value": "Banner by SerezDev"
+    },
+    "widgetAuthor": {
+        "type": "hidden",
+        "value": "SerezDev"
+    },
+    "widgetVersion": {
+        "type": "hidden",
+        "value": "1.0"
+    },
+    "widgetUpdateUrl": {
+        "type": "hidden",
+        "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Custom%20Chat"
+    }
+}
