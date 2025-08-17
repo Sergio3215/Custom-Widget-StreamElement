@@ -83,6 +83,31 @@
         "label": "Color Border",
         "value": "#280037"
     },
+    "Models": {
+        "type": "dropdown",
+        "label": "Modelos",
+        "value": "MessageBox",
+        "group": "Modelos",
+        "options": {
+            "MessageBox": "Message Box",
+            "WindowClassic": "Window Clasico"
+        }
+    },
+    "Family": {
+        "type": "dropdown",
+        "label": "Familia Fuente",
+        "value": "Montserrat",
+        "group": "Familia",
+        "options": {
+            "Montserrat": "Montserrat",
+            "sans-serif": "Sans Serif",
+            "Ubuntu": "Ubuntu",
+            "Edu QLD Hand": "Edu QLD Hand",
+            "Edu NSW ACT Hand Cursive": "Edu NSW ACT Hand Cursive",
+            "Mozilla Headline": "Mozilla Headline",
+            "Ubuntu Sans": "Ubuntu Sans"
+        }
+    },
     "widgetName": {
         "type": "hidden",
         "value": "Banner by SerezDev"

@@ -1,4 +1,4 @@
-
+let fieldData;
 const showMessage = async (objMessage) => {
     // console.log(objMessage);
 
@@ -24,13 +24,13 @@ const showMessage = async (objMessage) => {
     let arrText = text.split(" ");
     // console.log(arrText);
 
-    if(emotes.length > 0){
+    if (emotes.length > 0) {
         emotes.forEach(emote => {
-            arrText.forEach((txt, index)=>{
-                if(txt == emote.name){
+            arrText.forEach((txt, index) => {
+                if (txt == emote.name) {
                     arrText[index] = `<img id="emote" src="${emote.urls[1]}"/>`;
                 }
-                else{
+                else {
                     arrText[index] = `${txt}`;
                 }
             })
@@ -38,12 +38,11 @@ const showMessage = async (objMessage) => {
 
         myText = '';
         arrText.forEach(txt => {
-            myText += txt+" ";
+            myText += txt + " ";
         })
     }
 
-    document.querySelector(".main-container").innerHTML +=
-        `
+    let model1 = `
         <div class="chat-container" id="${msgId}">
             <div id="name-container">
                 ${images}
@@ -53,10 +52,38 @@ const showMessage = async (objMessage) => {
                 ${myText}
             </div>
         </div>
+    `, model2 = `
+        <div class="chat-container-2" id="${msgId}">
+            <div id="name-container-2">
+                ${displayName}
+                <span>X</span>
+            </div>
+            <div id="message-container-2">
+                ${myText}
+            </div>
+        </div>
     `;
+
+    const { Models } = fieldData;
+
+
+
+    document.querySelector(".main-container").innerHTML += Models == "MessageBox" ?
+        model1
+        :
+        model2;
 
     document.getElementById(msgId).style.animation = "showAndHide 1s normal";
 
+
+    if (document.querySelector(".main-container .chat-container-2") !== null) {
+        let Main = document.querySelectorAll(".main-container .chat-container-2");
+        Main.forEach(async (container) => {
+            setTimeout(() => {
+                container.style.opacity = 0;
+            }, 10000);
+        });
+    }
 
     if (document.querySelector(".main-container .chat-container") !== null) {
         let Main = document.querySelectorAll(".main-container .chat-container");
@@ -83,5 +110,8 @@ window.addEventListener('onEventReceived', async function (obj) {
 });
 
 window.addEventListener('onWidgetLoad', function (obj) {
-
+    if (!obj.detail.fieldData) {
+        return;
+    }
+    fieldData = obj.detail.fieldData;
 });
