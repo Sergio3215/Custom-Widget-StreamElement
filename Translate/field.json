@@ -1,15 +1,21 @@
 {
-  "Channel":{
+  "Channel": {
     "label": "Your Channel Name",
     "group": "Setting",
-  	"type":"text",
-    "value":"Your-Channel"
+    "type": "text",
+    "value": "Your-Channel"
   },
-  "ArrayBots":{
+  "FilterEmote": {
+    "label": "Filter Emote",
+    "group": "Setting",
+    "type": "checkbox",
+    "value": true
+  },
+  "ArrayBots": {
     "label": "Filter Bot",
     "group": "Setting",
-  	"type":"text",
-    "value":"SerezDevBot,StreamElements,Nightbot,SoundAlerts"
+    "type": "text",
+    "value": "SerezDevBot,StreamElements,Nightbot,SoundAlerts"
   },
   "widgetName": {
     "type": "hidden",

@@ -8,8 +8,8 @@
 
 let fieldData;
 
-const ignoredBot = (ArrBot, displayName)=>{
-    
+const ignoredBot = (ArrBot, displayName) => {
+
     //ignore the bots messages
     let ArrBotLabel = (ArrBot != '') ? ArrBot.toLowerCase().split(',')
         :
@@ -26,6 +26,26 @@ const ignoredBot = (ArrBot, displayName)=>{
     return isBot
 }
 
+const filterEmote = (text, emotes = []) => {
+    if (!emotes?.length) return text;
+
+    // 1) Escapar nombres para que se interpreten literalmente en regex
+    const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+    // 2) Armar el patrón alternado con nombres únicos y válidos
+    const pattern = [...new Set(emotes.map(e => e?.name).filter(Boolean))]
+        .map(esc)
+        .join("|");
+    if (!pattern) return text;
+
+    // 3) Borrar los emotes como “tokens” y no dentro de otras palabras
+    return text
+        .replace(new RegExp(`(^|\\s)(?:${pattern})(?=\\s|$|[.,!?;:])`, "gu"), "$1")
+        .replace(/\s{2,}/g, " ")          // 4) Colapsar espacios repetidos
+        .replace(/\s+([.,!?;:])/g, "$1")  // 5) Quitar espacio antes de puntuación
+        .trim();                          // 6) Limpiar extremos
+};
+
 
 /**
  * 
@@ -33,9 +53,9 @@ const ignoredBot = (ArrBot, displayName)=>{
  */
 
 async function sendMessage(obj) {
-    const { Channel, ArrayBots} = fieldData;
+    const { Channel, ArrayBots, FilterEmote } = fieldData;
     const data = obj.detail.event.data;
-    const {text, displayName} = data;
+    const { text, displayName, emotes } = data;
 
     // if(displayName.toLowerCase() == "serezdevbot" || displayName.toLowerCase() == "nightbot" || displayName.toLowerCase() == "streamelements"){
     //     return
@@ -45,12 +65,23 @@ async function sendMessage(obj) {
 
     //This Function works, you need select the channel
     try {
-        console.log(isBot)
-        if(isBot){
+        // console.log(isBot)
+        if (isBot) {
             throw new Error('Es bot')
         }
-        
-        console.log(isBot)
+
+        // console.log(isBot)
+
+        let txt = text;
+
+        if (FilterEmote) {
+            txt = filterEmote(text, emotes);
+
+            if (txt == "") {
+                return;
+            }
+        }
+
 
         const ftch = await fetch('https://tts-api-prod.up.railway.app/api/translate', {
             method: 'POST',
@@ -58,16 +89,16 @@ async function sendMessage(obj) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                text: text
+                text: txt
             })
         });
         const data = await ftch.json();
 
-        
-        if(data.skip){
+
+        if (data.skip) {
             throw new Error('skip')
         }
-        
+
         console.log(data.message)
 
         const ftch1 = await fetch('https://service-events-twitch-production.up.railway.app/send-message', {
