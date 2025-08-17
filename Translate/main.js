@@ -99,7 +99,7 @@ async function sendMessage(obj) {
             throw new Error('skip')
         }
 
-        console.log(data.message)
+        // console.log(data.message)
 
         const ftch1 = await fetch('https://service-events-twitch-production.up.railway.app/send-message', {
             method: 'POST',
