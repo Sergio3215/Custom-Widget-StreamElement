@@ -90,7 +90,8 @@
         "group": "Modelos",
         "options": {
             "MessageBox": "Message Box",
-            "WindowClassic": "Window Clasico"
+            "WindowClassic": "Window Clasico",
+            "corazones": "Corazoncitos"
         }
     },
     "Family": {

@@ -62,6 +62,21 @@ const showMessage = async (objMessage) => {
                 ${myText}
             </div>
         </div>
+    `,
+        model3 = `
+    <div class="chat-container-3" id="${msgId}">
+        <img src="https://raw.githubusercontent.com/Sergio3215/Custom-Widget-StreamElement/refs/heads/main/Custom%20Chat/static/corazon%20con%20alas.png"
+            id="heart" />
+        <div id="name-container-3">
+            ${displayName}
+        </div>
+        <div id="message-container-3">
+            <div class="line-container-3">
+                ${myText}
+                <img src="https://raw.githubusercontent.com/Sergio3215/Custom-Widget-StreamElement/refs/heads/main/Custom%20Chat/static/corazones%20dual.png" alt="">
+            </div>
+        </div>
+    </div>
     `;
 
     const { Models } = fieldData;
@@ -71,13 +86,25 @@ const showMessage = async (objMessage) => {
     document.querySelector(".main-container").innerHTML += Models == "MessageBox" ?
         model1
         :
-        model2;
+        Models == "WindowClassic" ?
+            model2
+            :
+            model3;
 
     document.getElementById(msgId).style.animation = "showAndHide 1s normal";
 
 
     if (document.querySelector(".main-container .chat-container-2") !== null) {
         let Main = document.querySelectorAll(".main-container .chat-container-2");
+        Main.forEach(async (container) => {
+            setTimeout(() => {
+                container.style.opacity = 0;
+            }, 10000);
+        });
+    }
+    
+    if (document.querySelector(".main-container .chat-container-3") !== null) {
+        let Main = document.querySelectorAll(".main-container .chat-container-3");
         Main.forEach(async (container) => {
             setTimeout(() => {
                 container.style.opacity = 0;
