@@ -1,0 +1,33 @@
+# Custom Chat | Chat Personalizado
+
+## Español
+
+### Descripción📝
+##### Este widget te permite traducir cualquier mensaje que esté en otro idioma que no sea español.
+
+### Comenzar 🚀
+Para comenzar, sigue estos pasos:
+
+- Crear un overlay en Stream Elements
+- Crear un widget estático personalizado
+- Agregar los siguientes archivos de código:
+    - HTML en index.html
+    - CSS en style.css
+    - JS en main.js
+    - Fields en fields.json
+
+## English
+
+### Description 📝
+##### This widget allows you to translate any message that is in a language other than Spanish.
+
+### Get Start 🚀
+To get started, follow these steps:
+
+- Create an overlay in Stream Elements
+- Create a custom static widget
+- Add the following code files:
+    - HTML in index.html
+    - CSS in style.css
+    - JS in main.js
+    - Fields in fields.json
