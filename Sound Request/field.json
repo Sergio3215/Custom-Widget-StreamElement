@@ -1,0 +1,42 @@
+{
+    "Channel": {
+        "label": "Your Channel Name",
+        "group": "Setting",
+        "type": "text",
+        "value": "Your-Channel"
+    },
+    "Command": {
+        "label": "Command",
+        "group": "Setting",
+        "type": "text",
+        "value": "!sr"
+    },
+    "RefreshToken": {
+        "label": "Refresh Token",
+        "group": "Setting",
+        "type": "text",
+        "value": "Refresh Token Spotify"
+    },
+    "Token": {
+        "label": "Token",
+        "group": "Setting",
+        "type": "text",
+        "value": "Token Spotify"
+    },
+    "widgetName": {
+        "type": "hidden",
+        "value": "Banner by SerezDev"
+    },
+    "widgetAuthor": {
+        "type": "hidden",
+        "value": "SerezDev"
+    },
+    "widgetVersion": {
+        "type": "hidden",
+        "value": "1.0"
+    },
+    "widgetUpdateUrl": {
+        "type": "hidden",
+        "value": "https://github.com/Sergio3215/Custom-Widget-StreamElement/tree/main/Custom%20Chat"
+    }
+}
