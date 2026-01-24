@@ -1,16 +1,3 @@
-/**
- const ftch = await fetch('https://service-events-twitch-production.up.railway.app/send-message', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        channel: Channel,
-        message: msg
-      })
-    });
- */
-
 let fieldData;
 
 const SendMessage = async (Channel, msg) => {
