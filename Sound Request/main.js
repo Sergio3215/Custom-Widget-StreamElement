@@ -15,9 +15,21 @@ const SendMessage = async (Channel, msg) => {
 
 const sendQueue = async (objMessage) => {
 
-    const { text } = objMessage;
+    const { text, displayName } = objMessage;
 
-    if (text.includes(fieldData.Command)) {
+    let isBot = false;
+
+    let ArrBotLabel = (everybodyBotFilters != '') ? everybodyBotFilters.toLowerCase().split(',')
+        :
+        everybodyBotFilters.toLowerCase().split('');
+
+    ArrBotLabel.forEach(element => {
+        if (element.toLowerCase() == displayName.toLowerCase()) {
+            isBot = true;
+        }
+    });
+
+    if (text.includes(fieldData.Command) && !isBot) {
         try {
 
             setTimeout(() => {

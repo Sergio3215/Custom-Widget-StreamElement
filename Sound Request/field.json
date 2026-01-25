@@ -23,6 +23,12 @@
         "type": "text",
         "value": "Token Spotify"
     },
+    "everybodyBotFilters": {
+        "label": "Bots to filter out",
+        "group": "Filters",
+        "type": "text",
+        "value": "StreamElements,Moobot,Nightbot, SerezDevBot"
+    },
     "widgetName": {
         "type": "hidden",
         "value": "Banner by SerezDev"
