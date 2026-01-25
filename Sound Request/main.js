@@ -19,6 +19,8 @@ const sendQueue = async (objMessage) => {
 
     let isBot = false;
 
+    const { everybodyBotFilters } = fieldData;
+
     let ArrBotLabel = (everybodyBotFilters != '') ? everybodyBotFilters.toLowerCase().split(',')
         :
         everybodyBotFilters.toLowerCase().split('');

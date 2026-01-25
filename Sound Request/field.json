@@ -27,11 +27,11 @@
         "label": "Bots to filter out",
         "group": "Filters",
         "type": "text",
-        "value": "StreamElements,Moobot,Nightbot, SerezDevBot"
+        "value": "StreamElements,Moobot,Nightbot,SerezDevBot"
     },
     "widgetName": {
         "type": "hidden",
-        "value": "Banner by SerezDev"
+        "value": "Sound Request by SerezDev"
     },
     "widgetAuthor": {
         "type": "hidden",
