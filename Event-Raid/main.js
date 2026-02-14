@@ -17,10 +17,10 @@ async function sendMessage(msg, data) {
   //This Function works, you need select the channel
   try {
     const { Channel, Message } = fieldData;
-    if(Message == ""){
+    if (Message == "") {
       Message = msg;
     }
-    else{
+    else {
       const {
         amount,
         name
@@ -45,6 +45,48 @@ async function sendMessage(msg, data) {
   }
 }
 
+const getClip = async (channel) => {
+  try {
+
+    const { Channel } = fieldData;
+
+    const ftch = await fetch('https://service-events-twitch-production.up.railway.app/get-clips', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        channel: channel
+      })
+    });
+
+    const data = await ftch.json();
+    console.log(data);
+
+    if (data.id !== undefined && data.id !== null && data.id !== "") {
+      const ftchClip = await fetch('https://service-clips-twitch-production.up.railway.app/api/clip', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          clipId: data.id,
+          channel: Channel,
+          raider: channel,
+          clipTitle: data.title
+        })
+      })
+
+      const dataClip = await ftchClip.json();
+      console.log(dataClip);
+    }
+
+    // console.log(await ftch);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 window.addEventListener('onEventReceived', async function (obj) {
   const data = obj.detail.event;
   if (obj.detail.listener == "raid-latest") {
@@ -58,13 +100,15 @@ window.addEventListener('onEventReceived', async function (obj) {
 
     //Here Send the message
     sendMessage(msg, data);
+
+    getClip(name);
   }
 });
 
 
 window.addEventListener('onWidgetLoad', function (obj) {
   if (!obj.detail.fieldData) {
-      return;
+    return;
   }
   fieldData = obj.detail.fieldData;
 });
