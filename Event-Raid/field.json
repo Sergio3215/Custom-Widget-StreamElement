@@ -15,7 +15,7 @@
     "type": "dropdown",
     "label": "Background Color",
     "value": "#020617",
-    "group": "Setting Sound",
+    "group": "Setting",
     "options": {
       "#022c22": "Emerald",
       "#0b1120": "Indigo",
