@@ -1,15 +1,30 @@
 {
-  "Channel":{
+  "Channel": {
     "label": "Your Channel Name",
     "group": "Setting",
-  	"type":"text",
-    "value":"Your-Channel"
+    "type": "text",
+    "value": "Your-Channel"
   },
-  "Message":{
+  "Message": {
     "label": "Message (Variables: $name, $amount)",
     "group": "Setting",
-  	"type":"text",
-    "value":"¡Gracias @$name por la raid de $amount Personas! Bienvenidos al canal! 🎉 Siganlo todos! https://www.twitch.tv/$name"
+    "type": "text",
+    "value": "¡Gracias @$name por la raid de $amount Personas! Bienvenidos al canal! 🎉 Siganlo todos! https://www.twitch.tv/$name"
+  },
+  "bgColor": {
+    "type": "dropdown",
+    "label": "Background Color",
+    "value": "#020617",
+    "group": "Setting Sound",
+    "options": {
+      "#022c22": "Emerald",
+      "#0b1120": "Indigo",
+      "#450a0a": "Red",
+      "#4c0519": "Rose",
+      "#082f49": "Sky",
+      "#020617": "Slate",
+      "#2e1065": "Violet"
+    }
   },
   "widgetName": {
     "type": "hidden",

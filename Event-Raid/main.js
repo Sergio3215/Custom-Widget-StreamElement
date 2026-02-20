@@ -48,7 +48,7 @@ async function sendMessage(msg, data) {
 const getClip = async (channel) => {
   try {
 
-    const { Channel } = fieldData;
+    const { Channel, bgColor } = fieldData;
 
     const ftch = await fetch('https://service-events-twitch-production.up.railway.app/get-clips', {
       method: 'POST',
@@ -73,7 +73,8 @@ const getClip = async (channel) => {
           clipId: data.id,
           channel: Channel,
           raider: channel,
-          clipTitle: data.title
+          clipTitle: data.title,
+          bgColor: bgColor
         })
       })
 
