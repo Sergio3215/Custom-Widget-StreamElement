@@ -11,17 +11,17 @@
         "type": "text",
         "value": "!sr"
     },
-    "RefreshToken": {
-        "label": "Refresh Token",
-        "group": "Setting",
-        "type": "text",
-        "value": "Refresh Token Spotify"
-    },
     "Token": {
         "label": "Token",
         "group": "Setting",
         "type": "text",
         "value": "Token Spotify"
+    },
+    "RefreshToken": {
+        "label": "Refresh Token",
+        "group": "Setting",
+        "type": "text",
+        "value": "Refresh Token Spotify"
     },
     "everybodyBotFilters": {
         "label": "Bots to filter out",
