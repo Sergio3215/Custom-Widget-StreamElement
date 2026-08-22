@@ -66,7 +66,7 @@ const sendQueue = async (objMessage, objNick) => {
 
             // let status = await ftch1.json();
 
-            SendMessage(fieldData.Channel, `${objNick} ha recibido 5 puntos`);
+            SendMessage(fieldData.Channel, `${objNick} ha obtenido 5 puntos`);
         }
     }
 }
