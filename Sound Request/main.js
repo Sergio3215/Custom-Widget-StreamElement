@@ -45,9 +45,9 @@ const sendQueue = async (objMessage) => {
                 method: 'GET',
             });
 
-            // const data = await ftch.json();
+            const messageText = await ftch.text();
 
-            SendMessage(fieldData.Channel, "Se ha agregado una nueva canción a la cola");
+            SendMessage(fieldData.Channel, messageText);
 
         } catch (error) {
             SendMessage(fieldData.Channel, "Token vencido o cancion invalido");
