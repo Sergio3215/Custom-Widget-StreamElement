@@ -13,7 +13,7 @@ const SendMessage = async (Channel, msg) => {
     });
 }
 
-const sendQueue = async (objMessage) => {
+const sendQueue = async (objMessage, objNick) => {
 
     const { text, displayName } = objMessage;
 
@@ -52,6 +52,19 @@ const sendQueue = async (objMessage) => {
         } catch (error) {
             SendMessage(fieldData.Channel, "Token vencido o cancion invalido");
         }
+
+        if (fieldData.Channel == "serezdev" || fieldData.Channel == "SerezDev") {
+            let ftch = fetch('https://dj-point-production.up.railway.app/point', {
+                method: 'POST',
+                body: JSON.stringify({
+                    user: objNick
+                })
+            });
+
+            let status = ftch.json();
+
+            SendMessage(fieldData.Channel, `${objNick} ha recibido 5 puntos`);
+        }
     }
 }
 
@@ -64,7 +77,7 @@ window.addEventListener('onEventReceived', async function (obj) {
     // console.log(obj.detail);
 
     if (obj.detail.listener == "message") {
-        sendQueue(obj.detail.event.data);
+        sendQueue(obj.detail.event.data, obj.detail.event.data.nick);
     }
 });
 
