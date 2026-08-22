@@ -54,14 +54,17 @@ const sendQueue = async (objMessage, objNick) => {
         }
 
         if (fieldData.Channel == "serezdev" || fieldData.Channel == "SerezDev") {
-            let ftch = fetch('https://dj-point-production.up.railway.app/point', {
+            let ftch1 = await fetch('https://dj-point-production.up.railway.app/point', {
                 method: 'POST',
                 body: JSON.stringify({
                     user: objNick
-                })
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             });
 
-            let status = ftch.json();
+            // let status = await ftch1.json();
 
             SendMessage(fieldData.Channel, `${objNick} ha recibido 5 puntos`);
         }
